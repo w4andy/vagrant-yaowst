@@ -2,21 +2,19 @@
 
 source ~/.nvm/nvm.sh
 
-echo "run cross test"
+echo "run cross test on $HOSTNAME"
 
-nvm use 0.10
-node_modules/.bin/_mocha ./test
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-nvm use 0.12
-node_modules/.bin/_mocha ./test
-
-nvm use iojs
-node_modules/.bin/_mocha ./test
-
-nvm use 4.2
-node_modules/.bin/_mocha ./test
-
-nvm use 5.0
-node_modules/.bin/_mocha ./test
+for v in $(cat $DIR/node_versions.txt); do
+    echo "#### run test with node version $v on $HOSTNAME ####"
+    nvm use "$v"
+    if [ $? -eq 0 ]; then
+        node_modules/.bin/_mocha ./test
+    else
+        echo "Can't switch to node version $v"
+    fi
+    echo "#### done test with node version $v on $HOSTNAME ####"
+done
 
 exit 0

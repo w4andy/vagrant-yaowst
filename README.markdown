@@ -4,5 +4,5 @@
 ## HowTo run the Test
 ```
 $ vagrant up
-$ ./scripts/run_all_tests.sh
+$ ./scripts/test_all_os.sh
 ```
