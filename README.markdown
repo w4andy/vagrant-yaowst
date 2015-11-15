@@ -18,10 +18,6 @@ The Vagrant Boxes use Rsnyc for the **Synced folder** to fix the problem with ca
 ## Setting up
 1. Install [Vagrant](https://docs.vagrantup.com/v2/installation/) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. Clone the `vagrant-yaowst` into the same directory as `node-yaowst`
-    ```
-    $ ls
-    node-yaowst vagrant-yaowst
-    ```
 3. `cd` into the `vagrant-yaowst` directory
 4. Start the VM´s by calling `vagrant up`
 
