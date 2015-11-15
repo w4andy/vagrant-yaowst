@@ -6,7 +6,7 @@
 
 - [Requires](#requires)
 - [Setting up](#setting-up)
-- [Run the cross os tests](#run-the-cross-os-tests)
+- [Run tests](#run-tests)
 
 ## Requires
 - [Vagrant](https://www.vagrantup.com/)
@@ -25,7 +25,7 @@ The Vagrant Boxes use Rsnyc for the **Synced folder** to fix the problem with ca
 3. `cd` into the `vagrant-yaowst` directory
 4. Start the VM´s by calling `vagrant up`
 
-## Run the cross os tests
+## Run tests
 ```
 $ cd vagrant-yaowst
 $ ./scripts/test_all_os.sh
