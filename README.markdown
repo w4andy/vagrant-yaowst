@@ -6,7 +6,7 @@
 
   - [Requires](#requires)
   - [Setting up](#setting-up)
-  - [Update Node.js version](#update-node.js-version)
+  - [Update Node.js version](#update-nodejs-version)
   - [Run tests](#run-tests)
   - [ChangeLog](./CHANGELOG.markdown)
   - [License](./LICENSE)
