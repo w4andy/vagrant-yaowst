@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 
-echo "install Node Version Manager"
-git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
-if [ $? -ne 0 ]; then
-    echo "Error on installing Node Version Manager"
-    exit 1
-fi
+if [ ! -d ~/.nvm ]; then
+    echo "install Node Version Manager"
+    git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git checkout `git describe --abbrev=0 --tags`
+    if [ $? -ne 0 ]; then
+        echo "Error on installing Node Version Manager"
+        exit 1
+    fi
 
-echo "source ~/.nvm/nvm.sh" >> ~/.bashrc
+    # add source to the .bashrc
+    echo "source ~/.nvm/nvm.sh" >> ~/.bashrc
+fi
 
 # include source
 source ~/.nvm/nvm.sh

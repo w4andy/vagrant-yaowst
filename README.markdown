@@ -4,24 +4,35 @@
 
 ## Table of Contents
 
-- [Requires](#requires)
-- [Setting up](#setting-up)
-- [Run tests](#run-tests)
+  - [Requires](#requires)
+  - [Setting up](#setting-up)
+  - [Update Node.js version](#update-node.js-version)
+  - [Run tests](#run-tests)
+  - [ChangeLog](./CHANGELOG.markdown)
+  - [License](./LICENSE)
 
 ## Requires
-- [Vagrant](https://www.vagrantup.com/)
-- [VirtualBox](https://www.virtualbox.org/)
-- [Rsync](https://docs.vagrantup.com/v2/synced-folders/rsync.html)
+
+  - [Vagrant](https://www.vagrantup.com/)
+  - [VirtualBox](https://www.virtualbox.org/)
+  - [Rsync](https://docs.vagrantup.com/v2/synced-folders/rsync.html)
 
 The Vagrant Boxes use Rsnyc for the **Synced folder** to fix the problem with case insensitive file system on the host system and the problems with os incompatible node module versions (e.q. Mac OS X use another binaries as GNU/Linux)
 
 ## Setting up
+
 1. Install [Vagrant](https://docs.vagrantup.com/v2/installation/) and [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 2. Clone the `vagrant-yaowst` into the same directory as `node-yaowst`
 3. `cd` into the `vagrant-yaowst` directory
 4. Start the VM´s by calling `vagrant up`
 
+## Update Node.js version
+
+1. Start the VM´s by calling `vagrant up`
+2. run `vagrant provision`
+
 ## Run tests
+
 ```
 $ cd vagrant-yaowst
 $ ./scripts/test_all_os.sh
